@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather Information</title>
+    <style>
+        /* Defines the size of the map */
+        #map {
+            width: 600px;
+            height: 500px;
+            margin-top: 20px;
+        }
+    </style>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="weather.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=<api-key>&callback=initMap">
+    </script>
+  </head>
+  <body onload="initialize();">
+    <form>
+      <input type="text" id="cityName" placeholder="Enter City Name">
+      <input type="button" onclick="getWeather();" value="Get Weather"/>
+    </form>
+    <div id="map"></div>
+    <div id="output">&nbsp;</div>
+  </body>
+</html>
+
